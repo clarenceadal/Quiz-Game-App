@@ -11,3 +11,6 @@ class QuizResult {
     required this.date,
   });
 }
+
+
+
