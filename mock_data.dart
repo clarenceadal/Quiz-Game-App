@@ -41,7 +41,7 @@ final mockCategories = [
 ];
 
 final mockQuestions = [
-  // Science
+  // Science - 10 questions
   Question(
       id: 'q1',
       categoryId: 'science',
@@ -56,54 +56,420 @@ final mockQuestions = [
       options: ['Earth', 'Mars', 'Jupiter', 'Venus'],
       correctAnswer: 'Mars',
       difficulty: 'Easy'),
-
-  // History
   Question(
       id: 'q3',
+      categoryId: 'science',
+      question: 'What is the chemical symbol for gold?',
+      options: ['Go', 'Gd', 'Au', 'Ag'],
+      correctAnswer: 'Au',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q4',
+      categoryId: 'science',
+      question: 'How many bones are in the adult human body?',
+      options: ['206', '208', '210', '204'],
+      correctAnswer: '206',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q5',
+      categoryId: 'science',
+      question: 'What is the speed of light?',
+      options: ['299,792 km/s', '150,000 km/s', '400,000 km/s', '250,000 km/s'],
+      correctAnswer: '299,792 km/s',
+      difficulty: 'Hard'),
+  Question(
+      id: 'q6',
+      categoryId: 'science',
+      question: 'What gas do plants absorb from the atmosphere?',
+      options: ['Oxygen', 'Nitrogen', 'Carbon Dioxide', 'Hydrogen'],
+      correctAnswer: 'Carbon Dioxide',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q7',
+      categoryId: 'science',
+      question: 'What is the largest organ in the human body?',
+      options: ['Heart', 'Liver', 'Skin', 'Brain'],
+      correctAnswer: 'Skin',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q8',
+      categoryId: 'science',
+      question: 'What is the most abundant gas in Earth\'s atmosphere?',
+      options: ['Oxygen', 'Carbon Dioxide', 'Nitrogen', 'Hydrogen'],
+      correctAnswer: 'Nitrogen',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q9',
+      categoryId: 'science',
+      question: 'What is the powerhouse of the cell?',
+      options: ['Nucleus', 'Mitochondria', 'Ribosome', 'Chloroplast'],
+      correctAnswer: 'Mitochondria',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q10',
+      categoryId: 'science',
+      question: 'What is the smallest unit of life?',
+      options: ['Atom', 'Molecule', 'Cell', 'Organ'],
+      correctAnswer: 'Cell',
+      difficulty: 'Easy'),
+
+  // History - 10 questions
+  Question(
+      id: 'q11',
       categoryId: 'history',
       question: 'Who was the first president of the USA?',
       options: ['Abraham Lincoln', 'George Washington', 'Thomas Jefferson', 'John Adams'],
       correctAnswer: 'George Washington',
       difficulty: 'Easy'),
-
-  // Geography
   Question(
-      id: 'q4',
+      id: 'q12',
+      categoryId: 'history',
+      question: 'In which year did World War II end?',
+      options: ['1943', '1944', '1945', '1946'],
+      correctAnswer: '1945',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q13',
+      categoryId: 'history',
+      question: 'Who discovered America in 1492?',
+      options: ['Amerigo Vespucci', 'Christopher Columbus', 'Leif Erikson', 'Ferdinand Magellan'],
+      correctAnswer: 'Christopher Columbus',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q14',
+      categoryId: 'history',
+      question: 'What was the name of the ship that brought the Pilgrims to America?',
+      options: ['Santa Maria', 'Mayflower', 'Beagle', 'Endeavour'],
+      correctAnswer: 'Mayflower',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q15',
+      categoryId: 'history',
+      question: 'Who was the first man to walk on the moon?',
+      options: ['Buzz Aldrin', 'Yuri Gagarin', 'Neil Armstrong', 'John Glenn'],
+      correctAnswer: 'Neil Armstrong',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q16',
+      categoryId: 'history',
+      question: 'Which empire built Machu Picchu?',
+      options: ['Aztec', 'Maya', 'Inca', 'Olmec'],
+      correctAnswer: 'Inca',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q17',
+      categoryId: 'history',
+      question: 'What year did the Berlin Wall fall?',
+      options: ['1987', '1988', '1989', '1990'],
+      correctAnswer: '1989',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q18',
+      categoryId: 'history',
+      question: 'Who painted the Mona Lisa?',
+      options: ['Michelangelo', 'Leonardo da Vinci', 'Raphael', 'Donatello'],
+      correctAnswer: 'Leonardo da Vinci',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q19',
+      categoryId: 'history',
+      question: 'What was the ancient Roman gladiator arena called?',
+      options: ['Pantheon', 'Parthenon', 'Colosseum', 'Forum'],
+      correctAnswer: 'Colosseum',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q20',
+      categoryId: 'history',
+      question: 'Who was the British Prime Minister during most of World War II?',
+      options: ['Neville Chamberlain', 'Winston Churchill', 'Clement Attlee', 'Anthony Eden'],
+      correctAnswer: 'Winston Churchill',
+      difficulty: 'Medium'),
+
+  // Geography - 10 questions
+  Question(
+      id: 'q21',
       categoryId: 'geography',
       question: 'Which is the largest continent?',
       options: ['Africa', 'Asia', 'Europe', 'North America'],
       correctAnswer: 'Asia',
       difficulty: 'Medium'),
-
-  // Movies
   Question(
-      id: 'q5',
+      id: 'q22',
+      categoryId: 'geography',
+      question: 'What is the capital of France?',
+      options: ['London', 'Berlin', 'Paris', 'Madrid'],
+      correctAnswer: 'Paris',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q23',
+      categoryId: 'geography',
+      question: 'Which is the longest river in the world?',
+      options: ['Amazon', 'Nile', 'Yangtze', 'Mississippi'],
+      correctAnswer: 'Nile',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q24',
+      categoryId: 'geography',
+      question: 'What is the smallest country in the world?',
+      options: ['Monaco', 'Vatican City', 'San Marino', 'Liechtenstein'],
+      correctAnswer: 'Vatican City',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q25',
+      categoryId: 'geography',
+      question: 'Which desert is the largest in the world?',
+      options: ['Sahara', 'Gobi', 'Arabian', 'Antarctic'],
+      correctAnswer: 'Antarctic',
+      difficulty: 'Hard'),
+  Question(
+      id: 'q26',
+      categoryId: 'geography',
+      question: 'What is the tallest mountain in the world?',
+      options: ['K2', 'Mount Everest', 'Kangchenjunga', 'Lhotse'],
+      correctAnswer: 'Mount Everest',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q27',
+      categoryId: 'geography',
+      question: 'Which ocean is the largest?',
+      options: ['Atlantic', 'Indian', 'Arctic', 'Pacific'],
+      correctAnswer: 'Pacific',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q28',
+      categoryId: 'geography',
+      question: 'What is the capital of Japan?',
+      options: ['Seoul', 'Beijing', 'Tokyo', 'Bangkok'],
+      correctAnswer: 'Tokyo',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q29',
+      categoryId: 'geography',
+      question: 'How many continents are there?',
+      options: ['5', '6', '7', '8'],
+      correctAnswer: '7',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q30',
+      categoryId: 'geography',
+      question: 'Which country has the most population?',
+      options: ['India', 'China', 'USA', 'Indonesia'],
+      correctAnswer: 'India',
+      difficulty: 'Medium'),
+
+  // Movies - 10 questions
+  Question(
+      id: 'q31',
       categoryId: 'movies',
-      question: 'Which movie features the character "Forrest Gump"?',
+      question: 'Which movie features the actor Tom Hanks?',
       options: ['Forrest Gump', 'Titanic', 'Inception', 'Avatar'],
       correctAnswer: 'Forrest Gump',
       difficulty: 'Easy'),
-
-  // Sports
   Question(
-      id: 'q6',
+      id: 'q32',
+      categoryId: 'movies',
+      question: 'Who directed the movie "Titanic"?',
+      options: ['Steven Spielberg', 'James Cameron', 'Christopher Nolan', 'Martin Scorsese'],
+      correctAnswer: 'James Cameron',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q33',
+      categoryId: 'movies',
+      question: 'What is the highest-grossing film of all time (unadjusted)?',
+      options: ['Avatar', 'Avengers: Endgame', 'Titanic', 'Star Wars'],
+      correctAnswer: 'Avatar',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q34',
+      categoryId: 'movies',
+      question: 'In which year was the first "Star Wars" movie released?',
+      options: ['1975', '1977', '1979', '1980'],
+      correctAnswer: '1977',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q35',
+      categoryId: 'movies',
+      question: 'Who played Jack Dawson in "Titanic"?',
+      options: ['Brad Pitt', 'Leonardo DiCaprio', 'Tom Cruise', 'Johnny Depp'],
+      correctAnswer: 'Leonardo DiCaprio',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q36',
+      categoryId: 'movies',
+      question: 'What is the name of the fictional African country in "Black Panther"?',
+      options: ['Wakanda', 'Zamunda', 'Genovia', 'Panem'],
+      correctAnswer: 'Wakanda',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q37',
+      categoryId: 'movies',
+      question: 'Which movie won the Oscar for Best Picture in 2020?',
+      options: ['1917', 'Joker', 'Parasite', 'Once Upon a Time in Hollywood'],
+      correctAnswer: 'Parasite',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q38',
+      categoryId: 'movies',
+      question: 'Who voiced Woody in "Toy Story"?',
+      options: ['Tom Hanks', 'Tim Allen', 'Billy Crystal', 'Robin Williams'],
+      correctAnswer: 'Tom Hanks',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q39',
+      categoryId: 'movies',
+      question: 'What is the name of the wizard school in "Harry Potter"?',
+      options: ['Beauxbatons', 'Durmstrang', 'Hogwarts', 'Ilvermorny'],
+      correctAnswer: 'Hogwarts',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q40',
+      categoryId: 'movies',
+      question: 'Which actor played Iron Man in the Marvel Cinematic Universe?',
+      options: ['Chris Evans', 'Chris Hemsworth', 'Robert Downey Jr.', 'Mark Ruffalo'],
+      correctAnswer: 'Robert Downey Jr.',
+      difficulty: 'Easy'),
+
+  // Sports - 10 questions
+  Question(
+      id: 'q41',
       categoryId: 'sports',
       question: 'How many players are there in a football (soccer) team on the field?',
       options: ['9', '10', '11', '12'],
       correctAnswer: '11',
       difficulty: 'Easy'),
-
-  // Technology
   Question(
-      id: 'q7',
+      id: 'q42',
+      categoryId: 'sports',
+      question: 'Which country won the FIFA World Cup in 2018?',
+      options: ['Brazil', 'Germany', 'France', 'Argentina'],
+      correctAnswer: 'France',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q43',
+      categoryId: 'sports',
+      question: 'In which sport would you perform a slam dunk?',
+      options: ['Volleyball', 'Basketball', 'Tennis', 'Baseball'],
+      correctAnswer: 'Basketball',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q44',
+      categoryId: 'sports',
+      question: 'How many Grand Slam tournaments are there in tennis?',
+      options: ['3', '4', '5', '6'],
+      correctAnswer: '4',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q45',
+      categoryId: 'sports',
+      question: 'Which athlete has won the most Olympic gold medals?',
+      options: ['Usain Bolt', 'Michael Phelps', 'Carl Lewis', 'Simone Biles'],
+      correctAnswer: 'Michael Phelps',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q46',
+      categoryId: 'sports',
+      question: 'What is the maximum score in a single frame of bowling?',
+      options: ['100', '200', '300', '400'],
+      correctAnswer: '300',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q47',
+      categoryId: 'sports',
+      question: 'Which country hosted the 2016 Summer Olympics?',
+      options: ['China', 'UK', 'Brazil', 'Russia'],
+      correctAnswer: 'Brazil',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q48',
+      categoryId: 'sports',
+      question: 'In American football, how many points is a touchdown worth?',
+      options: ['3', '6', '7', '8'],
+      correctAnswer: '6',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q49',
+      categoryId: 'sports',
+      question: 'Which sport is known as "the beautiful game"?',
+      options: ['Basketball', 'Soccer', 'Tennis', 'Rugby'],
+      correctAnswer: 'Soccer',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q50',
+      categoryId: 'sports',
+      question: 'How long is a marathon?',
+      options: ['26.2 miles', '24.2 miles', '28.2 miles', '30 miles'],
+      correctAnswer: '26.2 miles',
+      difficulty: 'Medium'),
+
+  // Technology - 10 questions
+  Question(
+      id: 'q51',
       categoryId: 'technology',
       question: 'What does CPU stand for?',
       options: ['Central Process Unit', 'Central Processing Unit', 'Computer Processing Unit', 'Central Power Unit'],
       correctAnswer: 'Central Processing Unit',
       difficulty: 'Medium'),
+  Question(
+      id: 'q52',
+      categoryId: 'technology',
+      question: 'Who is the founder of Microsoft?',
+      options: ['Steve Jobs', 'Bill Gates', 'Elon Musk', 'Mark Zuckerberg'],
+      correctAnswer: 'Bill Gates',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q53',
+      categoryId: 'technology',
+      question: 'What does HTML stand for?',
+      options: ['Hyper Text Markup Language', 'High Tech Modern Language', 'Home Tool Markup Language', 'Hyperlinks and Text Markup Language'],
+      correctAnswer: 'Hyper Text Markup Language',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q54',
+      categoryId: 'technology',
+      question: 'What year was the first iPhone released?',
+      options: ['2005', '2006', '2007', '2008'],
+      correctAnswer: '2007',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q55',
+      categoryId: 'technology',
+      question: 'What does GPU stand for?',
+      options: ['Graphics Processing Unit', 'General Processing Unit', 'Graphics Power Unit', 'Game Processing Unit'],
+      correctAnswer: 'Graphics Processing Unit',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q56',
+      categoryId: 'technology',
+      question: 'Which company developed the Android operating system?',
+      options: ['Apple', 'Microsoft', 'Google', 'Samsung'],
+      correctAnswer: 'Google',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q57',
+      categoryId: 'technology',
+      question: 'What does RAM stand for?',
+      options: ['Random Access Memory', 'Read Access Memory', 'Rapid Access Memory', 'Run Access Memory'],
+      correctAnswer: 'Random Access Memory',
+      difficulty: 'Easy'),
+  Question(
+      id: 'q58',
+      categoryId: 'technology',
+      question: 'What is the name of the first computer virus?',
+      options: ['ILOVEYOU', 'Creeper', 'Melissa', 'Morris Worm'],
+      correctAnswer: 'Creeper',
+      difficulty: 'Hard'),
+  Question(
+      id: 'q59',
+      categoryId: 'technology',
+      question: 'Which programming language is known as the "language of the web"?',
+      options: ['Python', 'Java', 'JavaScript', 'C++'],
+      correctAnswer: 'JavaScript',
+      difficulty: 'Medium'),
+  Question(
+      id: 'q60',
+      categoryId: 'technology',
+      question: 'What does USB stand for?',
+      options: ['Universal Serial Bus', 'United Serial Bus', 'Universal System Bus', 'United System Bus'],
+      correctAnswer: 'Universal Serial Bus',
+      difficulty: 'Easy'),
 ];
-
-
-
-
-
