@@ -13,6 +13,3 @@ class QuizCategory {
     required this.highScore,
   });
 }
-
-
-
