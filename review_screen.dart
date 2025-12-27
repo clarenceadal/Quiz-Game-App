@@ -27,9 +27,9 @@ class ReviewScreen extends ConsumerWidget {
     }
 
     final totalQuizzes = history.length;
-    final totalScore = history.fold<int>(0, (sum, q) => sum + q.score);
-    final averageScore = (totalScore / totalQuizzes).toStringAsFixed(1);
-    final highestScore = history.map((q) => q.score).reduce((a, b) => a > b ? a : b);
+    final totalCorrect = history.fold<int>(0, (sum, q) => sum + q.correctAnswers);
+    final totalQuestions = history.fold<int>(0, (sum, q) => sum + q.totalQuestions);
+    final overallPercentage = totalQuestions > 0 ? ((totalCorrect / totalQuestions) * 100).toStringAsFixed(1) : '0.0';
 
     return Scaffold(
       appBar: AppBar(
@@ -38,7 +38,6 @@ class ReviewScreen extends ConsumerWidget {
       ),
       body: Column(
         children: [
-          // Gradient stats panel
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16.0),
@@ -63,18 +62,14 @@ class ReviewScreen extends ConsumerWidget {
               children: [
                 Text('Total Quizzes: $totalQuizzes',
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-                Text('Average Score: $averageScore',
-                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
-                Text('Highest Score: $highestScore',
+                Text('Overall: $totalCorrect/$totalQuestions ($overallPercentage%)',
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
               ],
             ),
           ),
 
-          // Divider
           const Divider(height: 1, color: Colors.grey),
 
-          // Quiz history list
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12.0),
@@ -82,9 +77,8 @@ class ReviewScreen extends ConsumerWidget {
               itemBuilder: (context, index) {
                 final QuizResult result = history[index];
                 final dateStr = DateFormat('yyyy-MM-dd – kk:mm').format(result.date);
-                final scorePercent = (result.score / result.totalQuestions) * 100;
+                final scorePercent = (result.correctAnswers / result.totalQuestions) * 100;
 
-                // Card color based on score
                 Color cardColor;
                 if (scorePercent == 100) {
                   cardColor = Colors.green.shade100;
@@ -109,7 +103,6 @@ class ReviewScreen extends ConsumerWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Header with number and category
                           Row(
                             children: [
                               CircleAvatar(
@@ -121,10 +114,19 @@ class ReviewScreen extends ConsumerWidget {
                               ),
                               const SizedBox(width: 12),
                               Expanded(
-                                child: Text(
-                                  '${result.category} - ${result.score}/${result.totalQuestions}',
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold, fontSize: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      result.category,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold, fontSize: 16),
+                                    ),
+                                    Text(
+                                      '${result.correctAnswers}/${result.totalQuestions} (${scorePercent.toStringAsFixed(0)}%)',
+                                      style: const TextStyle(fontSize: 13),
+                                    ),
+                                  ],
                                 ),
                               ),
                               if (scorePercent == 100)
@@ -132,17 +134,12 @@ class ReviewScreen extends ConsumerWidget {
                             ],
                           ),
                           const SizedBox(height: 6),
-
-                          // Date
                           Text(dateStr, style: const TextStyle(fontSize: 12, color: Colors.grey)),
-
                           const SizedBox(height: 6),
-
-                          // Progress bar
                           ClipRRect(
                             borderRadius: BorderRadius.circular(6),
                             child: LinearProgressIndicator(
-                              value: result.score / result.totalQuestions,
+                              value: result.correctAnswers / result.totalQuestions,
                               minHeight: 8,
                               color: Colors.deepPurple,
                               backgroundColor: Colors.grey[300],
