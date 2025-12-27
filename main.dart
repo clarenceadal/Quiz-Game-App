@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'screens/category_screen.dart';
+import 'package:quiz_game_app/screens/category_screen.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class QuizApp extends StatelessWidget {
       title: 'Flutter Quiz Game',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const CategoryScreen(), // Make sure this is your category selection screen
+      home: const CategoryScreen(),
     );
   }
 }
