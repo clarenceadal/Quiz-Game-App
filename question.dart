@@ -15,6 +15,3 @@ class Question {
     required this.difficulty,
   });
 }
-
-
-
