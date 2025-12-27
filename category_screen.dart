@@ -6,7 +6,6 @@ import 'quiz_screen.dart';
 class CategoryScreen extends ConsumerWidget {
   const CategoryScreen({super.key});
 
-  // Map categories to icons (example)
   IconData _getCategoryIcon(String id) {
     switch (id) {
       case 'science':
@@ -52,7 +51,6 @@ class CategoryScreen extends ConsumerWidget {
           itemBuilder: (context, index) {
             final category = categories[index];
 
-            // Questions & difficulty summary
             final categoryQuestions = ref.read(questionsProvider(category.id));
             final totalQuestions = categoryQuestions.length;
             final difficultyCount = {
@@ -61,7 +59,6 @@ class CategoryScreen extends ConsumerWidget {
               'Hard': categoryQuestions.where((q) => q.difficulty == 'Hard').length,
             };
 
-            // High score & completion
             final categoryHistory = history.where((h) => h.category == category.name);
             final highScore = categoryHistory.isNotEmpty
                 ? categoryHistory.map((h) => h.score).reduce((a, b) => a > b ? a : b)
@@ -71,6 +68,22 @@ class CategoryScreen extends ConsumerWidget {
             return InkWell(
               borderRadius: BorderRadius.circular(20),
               onTap: () {
+                // Reset quiz state for a fresh attempt per category
+                final idx = ref.read(currentQuestionIndexProvider.notifier);
+                final sel = ref.read(answerSelectionProvider.notifier);
+                final sub = ref.read(answerSubmittedProvider.notifier);
+                final sc = ref.read(scoreProvider.notifier);
+                final ca = ref.read(correctAnswersProvider.notifier);
+                final st = ref.read(streakProvider.notifier);
+
+                idx.state = 0;
+                sel.state = null;
+                sub.state = false;
+                sc.state = 0;
+                ca.state = 0;
+                st.state = 0;
+
+                // Use session start + navigate
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => QuizScreen(category: category)),
